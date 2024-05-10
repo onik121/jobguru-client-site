@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA5BDRobSkLlRUW-ZM3xIsxpIynBEtpDyg",
-  authDomain: "jobguru-900fb.firebaseapp.com",
-  projectId: "jobguru-900fb",
-  storageBucket: "jobguru-900fb.appspot.com",
-  messagingSenderId: "497626190201",
-  appId: "1:497626190201:web:62239764ef6552f17e1fa8"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase

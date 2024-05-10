@@ -4,7 +4,7 @@
 
 
 /* navbar css */
-.navbar-end button{
+.navbar-end button {
     background-color: #7ad2a2;
     color: white;
     padding: 8px 15px;
@@ -13,7 +13,7 @@
     font-size: 15px;
 }
 
-.menu li a.active{
+.menu li a.active {
     background-color: #7ad2a2 !important;
     color: white !important;
     font-weight: 500;
@@ -30,6 +30,74 @@
     margin: 10px 0px;
 }
 
+/* home page */
+.slider {
+    height: 75vh;
+    background-position: center;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 20px;
+}
+
+.slider-content {
+    margin: 0px 60px;
+}
+
+.slider-2 {
+    background-image: url(../src/assets/2.jpg);
+}
+
+.slider-3 {
+    background-image: url(../src/assets/3.jpg);
+}
+
+.slider-4 {
+    background-image: url(../src/assets/4.jpg);
+}
+
+.swiper-button-next {
+    color: #4482ff !important;
+    background-color: white;
+    border-radius: 50%;
+    width: 45px !important;
+    height: 45px !important;
+}
+
+.swiper-button-next:after {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    margin-left: 4px;
+}
+
+.swiper-button-prev {
+    color: #4482ff !important;
+    background-color: white;
+    border-radius: 50%;
+    width: 45px !important;
+    height: 45px !important;
+}
+
+.swiper-button-prev:after {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    margin-left: -4px;
+}
+
+ox-shadow .swiper-pagination-bullet {
+    background: white !important;
+    opacity: var(--swiper-pagination-bullet-inactive-opacity, 1) !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #4482ff !important;
+}
 
 
 
@@ -68,17 +136,17 @@
 
 /* responsive code */
 @media screen and (max-width: 1000px) {
-    .sign-in{
+    .sign-in {
         flex-wrap: wrap;
     }
 
-    .sign-in > div {
+    .sign-in>div {
         width: 100%;
         display: flex;
         justify-content: center;
     }
 
-    .signin-text > div{
+    .signin-text>div {
         text-align: center;
     }
 
