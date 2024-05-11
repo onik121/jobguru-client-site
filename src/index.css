@@ -99,7 +99,20 @@ ox-shadow .swiper-pagination-bullet {
     background: #4482ff !important;
 }
 
+/*  */
+.react-tabs__tab {
+    font-weight: 500;
+    font-size: 18px;
+}
 
+.react-tabs__tab--selected {
+    color: #7ad2a2 !important;
+    border-color: #3f3f3f !important;
+}
+
+.react-tabs__tab-lis{
+    border-bottom: 2px solid black !important;
+}
 
 /* login page css */
 .signin-form input {
