@@ -34,7 +34,7 @@ const Register = () => {
     }
 
     return (
-        <div className='max-w-[1440px] mx-auto px-5 my-8 space-y-5 min-h-[calc(100vh-85px)] flex items-center justify-between sign-in'>
+        <div className='my-8 space-y-5 min-h-[calc(100vh-385px)] flex items-center justify-between sign-in'>
             <div className='bg-red- w-1/2 signin-text'>
                 <div>
                     <img className='w-[200px]' src={logo}></img>

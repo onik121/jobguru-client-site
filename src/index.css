@@ -135,6 +135,25 @@ ox-shadow .swiper-pagination-bullet {
 
 
 
+/* job details page */
+.details-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* login page css */
 .signin-form input {

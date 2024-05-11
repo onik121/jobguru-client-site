@@ -13,6 +13,7 @@ import Register from './pages/Register';
 import AuthProvider from './provider/AuthProvider';
 import { Toaster } from 'react-hot-toast';
 import Home from './pages/Home';
+import Details from './pages/Details';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/details/:id',
+        element: <Details></Details>,
+        loader: ({params}) => fetch(`http://localhost:5000/job/id/${params.id}`)
       }
     ]
   },

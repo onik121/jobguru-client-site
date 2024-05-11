@@ -17,7 +17,7 @@ const CategoryTab = () => {
     }, [])
 
     return (
-        <div className='mb-14'>
+        <div>
             <Tabs>
                 <div className='flex justify-center'>
                     <TabList>
