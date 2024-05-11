@@ -99,7 +99,7 @@ ox-shadow .swiper-pagination-bullet {
     background: #4482ff !important;
 }
 
-/*  */
+/* */
 .react-tabs__tab {
     font-weight: 500;
     font-size: 18px;
@@ -113,6 +113,28 @@ ox-shadow .swiper-pagination-bullet {
 .react-tabs__tab-lis{
     border-bottom: 2px solid black !important;
 }
+
+.job-cart-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.job-cart-box{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
+}
+
+.job-cart-box button{
+    background-color: #7ad2a2;
+    color: white;
+    border-radius: 5px;
+    padding: 3px 7px;
+    font-size: 14px;
+}
+
+
+
 
 /* login page css */
 .signin-form input {

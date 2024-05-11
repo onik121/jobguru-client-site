@@ -42,7 +42,7 @@ const AuthProvider = ({ children }) => {
 
     }, [])
 
-    console.log(user)
+    // console.log(user)
 
     const info = { createUers, loginUser, logOut, updateUserProfile, setUser, user, loading };
     return (
