@@ -14,6 +14,7 @@ import AuthProvider from './provider/AuthProvider';
 import { Toaster } from 'react-hot-toast';
 import Home from './pages/Home';
 import Details from './pages/Details';
+import PrivateRoute from './route/PrivateRouter';
 
 const router = createBrowserRouter([
   {
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/details/:id',
-        element: <Details></Details>,
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/job/id/${params.id}`)
       }
     ]

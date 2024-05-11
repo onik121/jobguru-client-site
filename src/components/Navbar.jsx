@@ -66,7 +66,7 @@ const Navbar = () => {
                             <details>
                                 <summary>Job</summary>
                                 <ul className="min-w-[130px] dropdown">
-                                    <li><Link>All Jobs</Link></li>
+                                    <li><Link to={'/alljobs'}>All Jobs</Link></li>
                                     <li><Link>Applied Jobs</Link></li>
                                     <li><Link>Add Job</Link></li>
                                     <li><Link>My Jobs</Link></li>
