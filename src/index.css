@@ -30,6 +30,14 @@
     margin: 10px 0px;
 }
 
+
+
+
+
+
+
+
+
 /* home page */
 .slider {
     height: 75vh;
@@ -135,6 +143,11 @@ ox-shadow .swiper-pagination-bullet {
 
 
 
+
+
+
+
+
 /* job details page */
 .details-container{
     display: grid;
@@ -188,6 +201,16 @@ ox-shadow .swiper-pagination-bullet {
 
 
 
+/* all jobs page  */
+.alljob-cart-box{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
+}
+
+.alljob-cart-box > div{
+    display: flex;
+    align-items: center;
+}
 
 
 

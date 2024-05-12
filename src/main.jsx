@@ -15,6 +15,7 @@ import { Toaster } from 'react-hot-toast';
 import Home from './pages/Home';
 import Details from './pages/Details';
 import PrivateRoute from './route/PrivateRouter';
+import AllJobs from './pages/AllJobs';
 
 const router = createBrowserRouter([
   {
@@ -36,8 +37,13 @@ const router = createBrowserRouter([
       {
         path: '/details/:id',
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/job/id/${params.id}`)
-      }
+        loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/jobs/id/${params.id}`)
+      },
+      {
+        path: '/alljobs',
+        element: <AllJobs></AllJobs>,
+        loader: () => fetch(`${import.meta.env.VITE_API_URL}/jobs`)
+      },
     ]
   },
 ]);
