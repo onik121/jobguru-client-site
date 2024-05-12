@@ -3,15 +3,57 @@ import img1 from '../assets/business-proposal.png';
 import img2 from '../assets/businessman.png';
 import img3 from '../assets/save-money.png';
 import img4 from '../assets/clock.png';
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import axios from "axios";
+import toast from "react-hot-toast";
+
 
 const Details = () => {
 
+    const [isSubmitted, setIsSubmitted] = useState(false); // State to track form submission
+    const [startDate, setStartDate] = useState(new Date());
     const job = useLoaderData()
-    const { job_banner, job_title, applicant_number, salary_range, description, deadline, category } = job;
     const { user } = useContext(AuthContext)
-    console.log(user)
+    const { job_banner, job_title, applicant_number, salary_range, description, deadline, category, buyer_email, job_category, _id } = job;
+
+    const handleApply = async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const jobId = _id
+        const email = user?.email;
+        if (email === buyer_email) {
+            toast.error('Action not permitted');
+            return;
+        }
+        const name = user?.displayName;
+        const resume = form.resume.value;
+        const status = 'Pending'
+
+        const bidData = {
+            email, name, resume, buyer_email, status, category, job_category, jobId
+        }
+        try {
+            const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/bids`, bidData)
+            console.log(data);
+            if (data.insertedId) {
+                toast.success('Applied Sucessfully');
+                setIsSubmitted(true); 
+                const modal = document.getElementById('my_modal_2');
+                if (modal) {
+                    modal.close();
+                }
+            }
+        }
+        catch (error) {
+            console.log(error.message)
+        }
+        form.reset();
+    }
+
+    // console.log(startDate)
 
     return (
         <div className="min-h-[calc(100vh-300px)] flex items-center">
@@ -45,7 +87,7 @@ const Details = () => {
                     </div>
                     <dialog id="my_modal_2" className="modal">
                         <div className="modal-box">
-                            <form>
+                            <form onSubmit={handleApply}>
                                 <div className="">
                                     <label className="block">Your Name</label>
                                     <div className="input-div"><p>{user?.displayName}</p></div>
@@ -56,9 +98,10 @@ const Details = () => {
                                 </div>
                                 <div>
                                     <label className="block">Your resume link</label>
-                                    <input className="w-full" type="text" name="" id="" />
+                                    <input className="w-full" type="text" name="resume" required />
                                 </div>
-                                <button className="apply mt-5">Submit</button>
+                                <DatePicker className="hidden" selected={startDate} onChange={(date) => setStartDate(date)} />
+                                <button className="apply mt-5" disabled={isSubmitted}>Submit</button> {/* Disable button if form is submitted */}
                             </form>
                         </div>
                         <form method="dialog" className="modal-backdrop">

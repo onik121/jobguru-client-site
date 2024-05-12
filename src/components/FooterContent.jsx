@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const FooterContent = () => {
     return (
 
-        <div className="w-full bg-red-">
+        <div className="w-full">
             <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
                 <div>
                     <img className="w-[160px]" src={logo}></img>

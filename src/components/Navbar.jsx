@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from '../assets/logo.jpg'
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
+import { Dropdown } from "flowbite-react";
 
 
 const Navbar = () => {
@@ -62,17 +63,12 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         <li><NavLink to={'/'}>Home</NavLink></li>
-                        <li>
-                            <details>
-                                <summary>Job</summary>
-                                <ul className="min-w-[130px] dropdown">
-                                    <li><Link to={'/alljobs'}>All Jobs</Link></li>
-                                    <li><Link>Applied Jobs</Link></li>
-                                    <li><Link>Add Job</Link></li>
-                                    <li><Link>My Jobs</Link></li>
-                                </ul>
-                            </details>
-                        </li>
+                        <Dropdown label="Job" className="drop-down">
+                            <Dropdown.Item ><Link to={'/'}>Applied Jobs</Link></Dropdown.Item>
+                            <Dropdown.Item ><Link to={'/all-jobs'}>All Jobs</Link></Dropdown.Item>
+                            <Dropdown.Item ><Link to={'/add-job'}>Add Jobs</Link></Dropdown.Item>
+                            <Dropdown.Item ><Link to={''}>My Jobs</Link></Dropdown.Item>
+                        </Dropdown>
                         <li><NavLink to={'/blogs'}>Blogs</NavLink></li>
                         <li><NavLink to={'/profile'}>Profile</NavLink></li>
                     </ul>
