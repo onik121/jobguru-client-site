@@ -21,6 +21,7 @@ const CategoryTab = () => {
             <Tabs>
                 <div className='flex justify-center'>
                     <TabList>
+                        <Tab>All Jobs</Tab>
                         <Tab>On-Site Job</Tab>
                         <Tab>Remote Job</Tab>
                         <Tab>Part-Time</Tab>
@@ -29,6 +30,13 @@ const CategoryTab = () => {
                 </div>
 
                 <div className='mt-5'>
+                    <TabPanel>
+                        <div className='job-cart-container'>
+                            {
+                                jobs.map(job => <JobCart key={job._id} job={job}></JobCart>)
+                            }
+                        </div>
+                    </TabPanel>
                     <TabPanel>
                         <div className='job-cart-container'>
                             {

@@ -23,7 +23,7 @@ const JobCart = ({ job }) => {
             <div className="job-cart-box p-4 h-full">
                 <div className="flex justify-between">
                     <p>Posted: {new Date (posting_date).toLocaleDateString()}</p>
-                    <button className="capitalize">{job_category}</button>
+                    <button className="">{job_category}</button>
                 </div>
                 <h2 className="text-2xl mt-1 mb-2 text-black font-medium">{job_title}</h2>
                 <p className="text-lg mb-3">{description.slice(0, 60)}...</p>

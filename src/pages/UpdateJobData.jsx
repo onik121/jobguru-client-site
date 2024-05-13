@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import { useState } from 'react';
 import toast from "react-hot-toast";
@@ -9,6 +9,7 @@ const UpdateJobData = () => {
     const job = useLoaderData()
     const { job_title, job_banner, max_salary, min_salary, deadline, _id, description } = job;
     const [startDate, setStartDate] = useState(new Date(deadline));
+    const navigate = useNavigate();
 
     const handleUpdate = async e => {
         e.preventDefault();
@@ -26,6 +27,7 @@ const UpdateJobData = () => {
             const { data } = await axios.patch(`${import.meta.env.VITE_API_URL}/jobs/${_id}`, updateData);
             if (data.modifiedCount > 0) {
                 toast.success('Update Successfull')
+                navigate('/my-posted-job')
             }
         }
         catch (err) {
