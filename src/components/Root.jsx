@@ -6,7 +6,7 @@ import FooterContent from "../components/FooterContent";
 const Root = () => {
     return (
         <div>
-            <div className="h-[80px] flex justify-center">
+            <div className="h-[70px] flex justify-center">
                 <Navbar></Navbar>
             </div>
             <div className="max-w-[1440px] px-5 mx-auto">

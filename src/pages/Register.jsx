@@ -38,7 +38,7 @@ const Register = () => {
             <div className='bg-red- w-1/2 signin-text'>
                 <div>
                     <img className='w-[200px]' src={logo}></img>
-                    <h1 className='capitalize text-3xl mt-3 font-medium text-black'>Please Register your account</h1>
+                    <h1 className='capitalize text-3xl mt-3 font-medium text-[#3f3f3f]'>Please Register your account</h1>
                 </div>
             </div>
             <div className='w-2/5 signin-form bg-red-'>
@@ -63,7 +63,7 @@ const Register = () => {
                         </div>
                     </div>
                     <div className='flex items-center flex-wrap gap-5'>
-                        <button>Register</button>
+                        <button className='button'>Register</button>
                         <p>Alredy have an account? <Link className='text-[#7ad2a2] font-medium' to={'/login'}>Login</Link></p>
                     </div>
                 </form>
