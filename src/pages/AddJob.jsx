@@ -42,76 +42,80 @@ const AddJob = () => {
     }
 
     return (
-        <div className='min-h-[calc(100vh-325px)] flex items-center'>
-            <div className='add-job-cantainer p-5 rounded-md bg-[#f1fcf6] boder mb-14 mt-4'>
-                <div className='add-background'></div>
-                <div className='add-job-formbox p-5'>
-                    <form className='space-y-5' onSubmit={handleAddJob}>
-                        <div>
-                            <label className='block'>Job Title</label>
-                            <input type="text" name="title" className='w-full' required/>
-                        </div>
-                        <div className='flex gap-6'>
-                            <div className='w-1/2'>
-                                <select name='category' className='Select'>
-                                    <option value='On-Site Job'>On-Site Job</option>
-                                    <option value='Remote Job'>Remote Job</option>
-                                    <option value='Part-Time'>Part-Time</option>
-                                    <option value='Hybrid'>Hybrid</option>
-                                </select>
+        <div className='min-h-[calc(100vh-325px)]'>
+            <div className='rounded-md bg-[#f1fcf6] boder p-5 mb-14 mt-4'>
+                <h1 className='text-center text-3xl font-medium'>Job Upload Center</h1>
+                <p className='text-center max-w-[600px] mx-auto text-lg text-black mt-5'>Streamline hiring, connect with talent. Post jobs effortlessly. Your gateway to building exceptional teams starts here.</p>
+                <div className='add-job-cantainer mt-8'>
+                    <div className='add-background'></div>
+                    <div className='add-job-formbox p-5'>
+                        <form className='space-y-5' onSubmit={handleAddJob}>
+                            <div>
+                                <label className='block'>Job Title</label>
+                                <input type="text" name="title" className='w-full' required />
                             </div>
-                            <div className='w-1/2'>
-                                <select name='jobcategory' className='Select'>
-                                    <option value='Web Development'>Web Development</option>
-                                    <option value='SEO'>SEO</option>
-                                    <option value='Content Writing'>Content Writing</option>
-                                    <option value='Graphic Design'>Graphic Design</option>
-                                    <option value='UI/UX Design'>UI/UX Design</option>
-                                    <option value='Digital Marketing'>Digital Marketing</option>
-                                    <option value='Social Media'>Social Media</option>
-                                    <option value='Full-Stake Developer'>Full-Stake Developer</option>
-                                    <option value='Front-end Development'>Front-end Development</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div className='flex gap-6'>
-                            <div className='w-1/2'>
-                                <label className='block'>Banner Url</label>
-                                <input className='w-full' type="text" name="banner" required/>
-                            </div>
-                            <div className='w-1/2'>
-                                <label className='block'>Deadline</label>
-                                <DatePicker className='date' selected={startDate} onChange={(date) => setStartDate(date)} />
-                            </div>
-                        </div>
-                        <div className='flex gap-6'>
-                            <div className='w-1/2'>
-                                <label className='block'>Your Name</label>
-                                <input className='w-full' type="text" name="" value={user?.displayName} disabled />
-                            </div>
-                            <div className='w-1/2'>
-                                <label className='block'>Your Email</label>
-                                <input className='w-full' type="text" name="" value={user?.email} disabled />
-                            </div>
-                        </div>
-                        <div>
                             <div className='flex gap-6'>
                                 <div className='w-1/2'>
-                                    <label className='block'>Minimun Salary</label>
-                                    <input className='w-full' type="number" name="minimum" required/>
+                                    <select name='category' className='Select'>
+                                        <option value='On-Site Job'>On-Site Job</option>
+                                        <option value='Remote Job'>Remote Job</option>
+                                        <option value='Part-Time'>Part-Time</option>
+                                        <option value='Hybrid'>Hybrid</option>
+                                    </select>
                                 </div>
                                 <div className='w-1/2'>
-                                    <label className='block'>Maximum Salary</label>
-                                    <input className='w-full' type="number" name="maximum" required/>
+                                    <select name='jobcategory' className='Select'>
+                                        <option value='Web Development'>Web Development</option>
+                                        <option value='SEO'>SEO</option>
+                                        <option value='Content Writing'>Content Writing</option>
+                                        <option value='Graphic Design'>Graphic Design</option>
+                                        <option value='UI/UX Design'>UI/UX Design</option>
+                                        <option value='Digital Marketing'>Digital Marketing</option>
+                                        <option value='Social Media'>Social Media</option>
+                                        <option value='Full-Stake Developer'>Full-Stake Developer</option>
+                                        <option value='Front-end Development'>Front-end Development</option>
+                                    </select>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <label className='block'>Description</label>
-                            <textarea name="description" className='w-full' required></textarea>
-                        </div>
-                        <button className="apply">Submit</button>
-                    </form>
+                            <div className='flex gap-6'>
+                                <div className='w-1/2'>
+                                    <label className='block'>Banner Url</label>
+                                    <input className='w-full' type="text" name="banner" required />
+                                </div>
+                                <div className='w-1/2'>
+                                    <label className='block'>Deadline</label>
+                                    <DatePicker className='date' selected={startDate} onChange={(date) => setStartDate(date)} />
+                                </div>
+                            </div>
+                            <div className='flex gap-6'>
+                                <div className='w-1/2'>
+                                    <label className='block'>Your Name</label>
+                                    <input className='w-full' type="text" name="" value={user?.displayName} disabled />
+                                </div>
+                                <div className='w-1/2'>
+                                    <label className='block'>Your Email</label>
+                                    <input className='w-full' type="text" name="" value={user?.email} disabled />
+                                </div>
+                            </div>
+                            <div>
+                                <div className='flex gap-6'>
+                                    <div className='w-1/2'>
+                                        <label className='block'>Minimun Salary</label>
+                                        <input className='w-full' type="number" name="minimum" required />
+                                    </div>
+                                    <div className='w-1/2'>
+                                        <label className='block'>Maximum Salary</label>
+                                        <input className='w-full' type="number" name="maximum" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label className='block'>Description</label>
+                                <textarea name="description" className='w-full' required></textarea>
+                            </div>
+                            <button className="apply">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
