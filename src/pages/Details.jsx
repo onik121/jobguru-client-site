@@ -17,7 +17,7 @@ const Details = () => {
     const [startDate, setStartDate] = useState(new Date());
     const job = useLoaderData()
     const { user } = useContext(AuthContext)
-    const { job_banner, job_title, applicant_number, salary_range, description, deadline, category, buyer_email, job_category, _id } = job;
+    const { job_banner, job_title, applicant_number, description, deadline, category, buyer_email, job_category, _id, max_salary, min_salary } = job;
 
     const handleApply = async (e) => {
         e.preventDefault();
@@ -26,6 +26,10 @@ const Details = () => {
         const email = user?.email;
         if (email === buyer_email) {
             toast.error('Action not permitted');
+            const modal = document.getElementById('my_modal_2');
+            if (modal) {
+                modal.close();
+            }
             return;
         }
         const name = user?.displayName;
@@ -40,7 +44,7 @@ const Details = () => {
             console.log(data);
             if (data.insertedId) {
                 toast.success('Applied Sucessfully');
-                setIsSubmitted(true); 
+                setIsSubmitted(true);
                 const modal = document.getElementById('my_modal_2');
                 if (modal) {
                     modal.close();
@@ -53,26 +57,25 @@ const Details = () => {
         form.reset();
     }
 
-    // console.log(startDate)
 
     return (
         <div className="min-h-[calc(100vh-300px)] flex items-center">
-            <div className="details-container bg-[#f1fcf6] p-4 rounded-md">
+            <div className="details-container bg-[#f1fcf6] p-4 rounded-md boder">
                 <img className="rounded-md" src={job_banner}></img>
                 <div className="flex items-center">
-                    <div>
+                    <div className="w-full">
                         <div>
-                            <h1 className="text-3xl font-semibold text-black">{job_title}</h1>
+                            <h1 className="text-3xl font-semibold text-black capitalize">{job_title}</h1>
                             <p className="text-lg mt-3">{description}</p>
                         </div>
-                        <div className="destilas-box bg-white rounded-md p-4 mt-5 space-y-5">
+                        <div className="destilas-box w-[100%] rounded-md p-4 mt-5 space-y-5 bg-white">
                             <div className="flex items-center gap-2">
                                 <img src={img2}></img>
                                 <p className="font-medium">Type: {category}</p>
                             </div>
                             <div className="flex items-center gap-2">
                                 <img src={img3}></img>
-                                <p className="font-medium">Salary: {salary_range}</p>
+                                <p className="font-medium">Salary: ${max_salary} - {min_salary}</p>
                             </div>
                             <div className="flex items-center gap-2">
                                 <img src={img1}></img>
@@ -80,7 +83,7 @@ const Details = () => {
                             </div>
                             <div className="flex items-center gap-2">
                                 <img src={img4}></img>
-                                <p className="font-medium">Deadline: {deadline}</p>
+                                <p className="font-medium">Deadline: {new Date(deadline).toLocaleDateString()}</p>
                             </div>
                             <button onClick={() => document.getElementById('my_modal_2').showModal()} className="apply">Apply Now</button>
                         </div>

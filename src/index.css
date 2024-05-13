@@ -27,14 +27,14 @@
     font-weight: 500;
 }
 
-.menu-horizontal > button{
+.menu-horizontal>button {
     border-radius: 5px !important;
     padding: 0px !important;
     background-color: whitesmoke !important;
-    color:  black !important;
+    color: black !important;
 }
 
-.menu-horizontal ul li{
+.menu-horizontal ul li {
     margin: 10px 10px !important;
 }
 
@@ -42,11 +42,11 @@
     box-shadow: none !important;
 }
 
-.menu-horizontal > button:hover{
+.menu-horizontal>button:hover {
     background-color: whitesmoke !important;
 }
 
-.menu-horizontal > button svg{
+.menu-horizontal>button svg {
     margin-top: 3px !important;
 }
 
@@ -137,22 +137,22 @@ ox-shadow .swiper-pagination-bullet {
     border-color: #3f3f3f !important;
 }
 
-.react-tabs__tab-lis{
+.react-tabs__tab-lis {
     border-bottom: 2px solid black !important;
 }
 
-.job-cart-container{
+.job-cart-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-.job-cart-box{
+.job-cart-box {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border-radius: 5px;
 }
 
-.job-cart-box button{
+.job-cart-box button {
     background-color: #7ad2a2;
     color: white;
     border-radius: 5px;
@@ -168,18 +168,18 @@ ox-shadow .swiper-pagination-bullet {
 
 
 /* job details page */
-.details-container{
+.details-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     border: 1px solid whitesmoke;
 }
 
-.destilas-box{
+.destilas-box {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-.apply{
+.apply {
     background-color: #7ad2a2;
     color: white;
     padding: 8px 15px;
@@ -188,18 +188,18 @@ ox-shadow .swiper-pagination-bullet {
     font-size: 15px;
 }
 
-.modal-box{
+.modal-box {
     border-radius: 5px !important;
 }
 
-.modal-box input{
+.modal-box input {
     outline: none !important;
     border-radius: 5px;
     height: 47px;
     border: 1px solid black;
 }
 
-.input-div{
+.input-div {
     height: 47px;
     width: 100%;
     border: 1px solid black;
@@ -209,8 +209,8 @@ ox-shadow .swiper-pagination-bullet {
     padding: 0px 10px;
 }
 
-.modal-box label{
-    margin-bottom: 8px;
+.modal-box label {
+    margin-bottom: 7px;
     font-weight: 500;
     font-size: 17px;
 }
@@ -219,26 +219,99 @@ ox-shadow .swiper-pagination-bullet {
 
 
 
-
 /* all jobs page  */
-.alljob-cart-box{
+.alljob-cart-box {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border-radius: 5px;
 }
 
-.alljob-cart-box > div{
+.alljob-cart-box>div {
     display: flex;
     align-items: center;
 }
 
 
 
+
+
 /* add job page */
-.add-job-cantainer{
+.add-job-cantainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    gap: 30px;
+    width: 100%;
 }
+
+.boder {
+    border: 1px solid whitesmoke;
+}
+
+.add-job-formbox label {
+    margin-bottom: 7px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #3f3f3f;
+}
+
+.add-job-cantainer input {
+    height: 47px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.Select {
+    height: 47px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.Select:focus {
+    outline: none;
+    border-color: black !important;
+    box-shadow: none !important;
+}
+
+.add-job-cantainer textarea {
+    height: 80px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.add-job-cantainer textarea:focus {
+    outline: none;
+    border-color: black !important;
+    box-shadow: none !important;
+}
+
+.date {
+    width: 100% !important;
+}
+
+.react-datepicker-wrapper {
+    width: 100% !important;
+}
+
+.add-job-formbox {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.add-background {
+    background: url('./assets/add-job.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+
+
+
+
 
 
 

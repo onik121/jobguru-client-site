@@ -9,7 +9,7 @@ import toast from "react-hot-toast";
 
 const JobCart = ({ job }) => {
 
-    const { _id, description, job_title, job_category, applicant_number, salary_range, name } = job;
+    const { _id, description, job_title, job_category, applicant_number, name, posting_date, min_salary, max_salary } = job;
 
     const { user } = useContext(AuthContext)
     const handleGo = () => {
@@ -20,9 +20,9 @@ const JobCart = ({ job }) => {
 
     return (
         <Link to={`/details/${_id}`} onClick={handleGo}>
-            <div className="job-cart-box p-4">
+            <div className="job-cart-box p-4 h-full">
                 <div className="flex justify-between">
-                    <p>Posted: 10/1/2024</p>
+                    <p>Posted: {new Date (posting_date).toLocaleDateString()}</p>
                     <button className="capitalize">{job_category}</button>
                 </div>
                 <h2 className="text-2xl mt-1 mb-2 text-black font-medium">{job_title}</h2>
@@ -33,7 +33,7 @@ const JobCart = ({ job }) => {
                 </div>
                 <div className="flex items-center gap-2 mb-4">
                     <img src={img3}></img>
-                    <p className="font-medium">Salary: {salary_range}</p>
+                    <p className="font-medium">Salary: ${max_salary} - {min_salary}</p>
                 </div>
                 <div className="flex items-center gap-2">
                     <img src={img1}></img>

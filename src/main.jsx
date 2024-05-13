@@ -17,6 +17,8 @@ import Details from './pages/Details';
 import PrivateRoute from './route/PrivateRouter';
 import AllJobs from './pages/AllJobs';
 import AddJob from './pages/AddJob';
+import MyPostedJobs from './pages/MyPostedJobs';
+import UpdateJobData from './pages/UpdateJobData';
 
 const router = createBrowserRouter([
   {
@@ -48,7 +50,16 @@ const router = createBrowserRouter([
       {
         path: '/add-job',
         element: <AddJob></AddJob>
-      }
+      },
+      {
+        path: '/my-posted-job',
+        element: <PrivateRoute><MyPostedJobs></MyPostedJobs></PrivateRoute>
+      },
+      {
+        path: '/update/:id',
+        element: <UpdateJobData></UpdateJobData>,
+        loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/jobs/id/${params.id}`)
+      },
     ]
   },
 ]);
@@ -56,7 +67,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} /><Toaster />
+      <RouterProvider router={router} /><Toaster position="top-right"/>
     </AuthProvider>
   </React.StrictMode>
 );

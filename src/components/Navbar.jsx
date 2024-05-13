@@ -64,10 +64,10 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal px-1">
                         <li><NavLink to={'/'}>Home</NavLink></li>
                         <Dropdown label="Job" className="drop-down">
-                            <Dropdown.Item ><Link to={'/'}>Applied Jobs</Link></Dropdown.Item>
-                            <Dropdown.Item ><Link to={'/all-jobs'}>All Jobs</Link></Dropdown.Item>
-                            <Dropdown.Item ><Link to={'/add-job'}>Add Jobs</Link></Dropdown.Item>
-                            <Dropdown.Item ><Link to={''}>My Jobs</Link></Dropdown.Item>
+                            <Link to={'/'}><Dropdown.Item >Applied Jobs</Dropdown.Item></Link>
+                            <Link to={'/all-jobs'}><Dropdown.Item >All Jobs</Dropdown.Item></Link>
+                            <Link to={'/add-job'}><Dropdown.Item >Add Jobs</Dropdown.Item></Link>
+                            <Link to={'my-posted-job'}><Dropdown.Item >My Jobs</Dropdown.Item></Link>
                         </Dropdown>
                         <li><NavLink to={'/blogs'}>Blogs</NavLink></li>
                         <li><NavLink to={'/profile'}>Profile</NavLink></li>
