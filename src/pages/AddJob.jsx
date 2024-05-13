@@ -44,7 +44,7 @@ const AddJob = () => {
     return (
         <div className='min-h-[calc(100vh-325px)]'>
             <div className='rounded-md bg-[#f1fcf6] boder p-5 mb-14 mt-4'>
-                <h1 className='text-center text-3xl font-medium'>Job Upload Center</h1>
+                <h1 className='text-center text-3xl font-bold text-[#3f3f3f]'>Job Upload Center</h1>
                 <p className='text-center max-w-[600px] mx-auto text-lg text-black mt-5'>Streamline hiring, connect with talent. Post jobs effortlessly. Your gateway to building exceptional teams starts here.</p>
                 <div className='add-job-cantainer mt-8'>
                     <div className='add-background'></div>

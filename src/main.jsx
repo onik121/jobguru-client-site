@@ -19,11 +19,13 @@ import AllJobs from './pages/AllJobs';
 import AddJob from './pages/AddJob';
 import MyPostedJobs from './pages/MyPostedJobs';
 import UpdateJobData from './pages/UpdateJobData';
+import Error from './pages/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: '/',
