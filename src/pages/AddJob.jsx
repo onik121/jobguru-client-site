@@ -4,12 +4,14 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import toast from 'react-hot-toast';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const AddJob = () => {
 
     const { user } = useContext(AuthContext)
     const [startDate, setStartDate] = useState(new Date());
     const [postingtDate, setPostingDate] = useState(new Date());
+    const navigate = useNavigate();
 
     const handleAddJob = async (e) => {
         e.preventDefault();
@@ -34,6 +36,7 @@ const AddJob = () => {
             if (data.insertedId) {
                 toast.success('Added Sucessfully');
                 from.reset();
+                navigate('/my-posted-job')
             }
         }
         catch (error) {

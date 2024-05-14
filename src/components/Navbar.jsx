@@ -33,7 +33,7 @@ const Navbar = () => {
         <li><NavLink to={'/all-jobs'}>All Jobs</NavLink></li>
         {
             user && <Dropdown label="Job" className="drop-down">
-                <Link to={'/'}><Dropdown.Item >Applied Jobs</Dropdown.Item></Link>
+                <Link to={'/applied-jobs'}><Dropdown.Item >Applied Jobs</Dropdown.Item></Link>
                 <Link to={'/add-job'}><Dropdown.Item >Add Jobs</Dropdown.Item></Link>
                 <Link to={'my-posted-job'}><Dropdown.Item >My Jobs</Dropdown.Item></Link>
             </Dropdown>

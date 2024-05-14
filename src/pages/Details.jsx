@@ -34,10 +34,8 @@ const Details = () => {
         }
         const name = user?.displayName;
         const resume = form.resume.value;
-        const status = 'Pending'
-
         const bidData = {
-            email, name, resume, buyer_email, status, category, job_category, jobId
+            email, name, resume, category, job_category, jobId, max_salary, min_salary, job_title, deadline
         }
         try {
             const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/bids`, bidData)

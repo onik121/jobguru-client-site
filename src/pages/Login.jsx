@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.jpg'
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import toast from 'react-hot-toast';
 import google from '../assets/goole.png'
@@ -9,10 +9,16 @@ import auth from '../firebase/firebase.config';
 
 const Login = () => {
 
-    const { loginUser } = useContext(AuthContext);
+    const { loginUser, user, loading } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const googlrProvider = new GoogleAuthProvider();
+
+    useEffect(() => {
+        if(user) {
+            navigate('/')
+        }
+    },[user, navigate])
 
     const handleLogin = e => {
         e.preventDefault();
@@ -41,6 +47,8 @@ const Login = () => {
                 toast.error(error.code)
             })
     }
+
+    if(user || loading) return;
 
     return (
         <div className='my-8 min-h-[calc(100vh-390px)] flex items-center justify-between sign-in'>

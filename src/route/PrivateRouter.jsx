@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { PropTypes } from 'prop-types';
 import { AuthContext } from "../provider/AuthProvider";
+import error from '../Animation.json'
+import Lottie from "lottie-react";
 
 const PrivateRoute = ({children}) => {
 
@@ -10,7 +12,7 @@ const PrivateRoute = ({children}) => {
 
     if(loading) {
         return <div className="min-h-[calc(100vh-350px)] flex items-center justify-center">
-            <span className="loading loading-spinner loading-lg"></span>
+            <Lottie className='max-w-[180px]' loop={true} animationData={error}></Lottie>
         </div>;
     }
 
