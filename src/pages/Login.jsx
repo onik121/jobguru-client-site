@@ -9,16 +9,16 @@ import auth from '../firebase/firebase.config';
 
 const Login = () => {
 
-    const { loginUser, user, loading } = useContext(AuthContext);
+    const { loginUser } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const googlrProvider = new GoogleAuthProvider();
 
-    useEffect(() => {
-        if(user) {
-            navigate('/')
-        }
-    },[user, navigate])
+    // useEffect(() => {
+    //     if (user) {
+    //         navigate('/')
+    //     }
+    // }, [user, navigate])
 
     const handleLogin = e => {
         e.preventDefault();
@@ -32,6 +32,7 @@ const Login = () => {
                 toast.success('Login Successfull')
             })
             .catch(error => {
+                console.log(error)
                 toast.error(error.code)
                 form.reset();
             })
@@ -48,10 +49,10 @@ const Login = () => {
             })
     }
 
-    if(user || loading) return;
+    // if (user || loading) return;
 
     return (
-        <div className='my-8 min-h-[calc(100vh-390px)] flex items-center justify-between sign-in'>
+        <div className='mb-14 mt-4 min-h-[calc(100vh-390px)] flex items-center justify-between sign-in gap-10'>
             <div className='w-1/2 signin-text'>
                 <div>
                     <img className='w-[200px]' src={logo}></img>
@@ -59,16 +60,16 @@ const Login = () => {
                     <h1 className='capitalize text-3xl mt-3 font-medium text-[#3f3f3f]'>Login to your account</h1>
                 </div>
             </div>
-            <div className='w-2/5 signin-form'>
-                <div>
-                    <button className='google' onClick={handleGoogleLogin}>Sign is with Google<img src={google}></img></button>
-                </div>
-                <div className='line flex items-center justify-between mt-5 mb-2'>
-                    <div></div>
-                    <p className='uppercase'>or login with email</p>
-                    <div></div>
-                </div>
-                <form className='space-y-5' onSubmit={handleLogin}>
+            <div className='w-2/5 signin-form flex items-center'>
+                <form className='space-y-5 w-full' onSubmit={handleLogin}>
+                    <div>
+                        <button className='google' onClick={handleGoogleLogin}>Sign is with Google<img src={google}></img></button>
+                    </div>
+                    <div className='line flex items-center justify-between mt-5 mb-2'>
+                        <div></div>
+                        <p className='uppercase'>or login with email</p>
+                        <div></div>
+                    </div>
                     <div>
                         <label className='block'>Your Email</label>
                         <input type="email" name="email" />

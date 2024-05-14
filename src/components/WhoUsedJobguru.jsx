@@ -9,12 +9,22 @@ const WhoUsedJobguru = () => {
         <div className='bg-[#7ad2a2] rounded-md min-h-[170px] px-10 py-10 flex items-center justify-center mt-16 mb-16'>
             <div className='w-full'>
                 <h1 className='text-2xl font- text-white text-center mb-8'>The fastedt-growing companies use JobGuru</h1>
-                <div className='flex flex-wrap justify-between w-full'>
-                    <img src={logo1} alt="" />
-                    <img src={logo2} alt="" />
-                    <img src={logo3} alt="" />
-                    <img src={logo4} alt="" />
-                    <img src={logo5} alt="" />
+                <div className='logo-box'>
+                    <div>
+                        <img src={logo1} alt="" />
+                    </div>
+                    <div>
+                        <img src={logo3} alt="" />
+                    </div>
+                    <div>
+                        <img src={logo4} alt="" />
+                    </div>
+                    <div>
+                        <img src={logo5} alt="" />
+                    </div>
+                    <div>
+                        <img src={logo2} alt="" />
+                    </div>
                 </div>
             </div>
         </div>

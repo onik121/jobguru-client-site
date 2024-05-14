@@ -16,11 +16,12 @@ import Home from './pages/Home';
 import Details from './pages/Details';
 import PrivateRoute from './route/PrivateRouter';
 import AllJobs from './pages/AllJobs';
-import AddJob from './pages/AddJob';
 import MyPostedJobs from './pages/MyPostedJobs';
 import UpdateJobData from './pages/UpdateJobData';
 import Error from './pages/Error';
 import Mybids from './pages/Mybids';
+import AddJob from './pages/AddJob';
+import Blog from './pages/Blog';
 
 const router = createBrowserRouter([
   {
@@ -52,7 +53,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/add-job',
-        element: <PrivateRoute></PrivateRoute>
+        element: <PrivateRoute><AddJob></AddJob></PrivateRoute>
       },
       {
         path: '/my-posted-job',
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
       {
         path: '/applied-jobs',
         element: <PrivateRoute><Mybids></Mybids></PrivateRoute>
+      },
+      {
+        path: '/blogs',
+        element: <Blog></Blog>
       }
     ]
   },

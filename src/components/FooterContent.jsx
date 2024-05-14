@@ -7,24 +7,24 @@ const FooterContent = () => {
     return (
 
         <div className="w-full">
-            <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
+            <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1 sm:space-y-0 space-y-6">
                 <div>
                     <img className="w-[160px]" src={logo}></img>
                 </div>
                 <div className="space-y-2">
-                    <h2 className="text-2xl font-semibold text-[#3f3f3f] mb-4">Quick Link</h2>
+                    <h2 className="text-2xl font-semibold text-[#3f3f3f] mb-3">Quick Link</h2>
                     <Link className="block">Login</Link>
                     <Link className="block">Blogs</Link>
                     <Link className="block">Profile</Link>
                 </div>
                 <div className="space-y-2">
-                    <h2 className="text-2xl font-semibold text-[#3f3f3f] mb-4">Legal</h2>
+                    <h2 className="text-2xl font-semibold text-[#3f3f3f] mb-3">Legal</h2>
                     <Link className="block">Terms of use</Link>
                     <Link className="block">Terms of use</Link>
                     <Link className="block">Terms of use</Link>
                 </div>
                 <div className="space-y-2">
-                    <h2 className="text-2xl font-semibold text-[#3f3f3f] mb-4">About</h2>
+                    <h2 className="text-2xl font-semibold text-[#3f3f3f] mb-3">About</h2>
                     <Link className="block">Terms of use</Link>
                     <Link className="block">Terms of use</Link>
                     <Link className="block">Terms of use</Link>

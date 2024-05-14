@@ -25,8 +25,8 @@ const BestJobPlatform = () => {
                     <button className='button'>Explore More Jobs</button>
                 </div>
             </div>
-            <div className='bg-blue- flex items-center justify-end'>
-                <img className='max-w-[80%]' src={img1}></img>
+            <div className='flex items-center justify-end best-platfrom-img'>
+                <img className='w-[80%]' src={img1}></img>
             </div>
         </div>
     );

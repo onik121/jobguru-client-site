@@ -34,14 +34,14 @@ const Register = () => {
     }
 
     return (
-        <div className='my-8 space-y-5 min-h-[calc(100vh-385px)] flex items-center justify-between sign-in'>
+        <div className='mb-14 mt-4 min-h-[calc(100vh-385px)] flex items-center justify-between sign-in gap-10'>
             <div className='bg-red- w-1/2 signin-text'>
                 <div>
                     <img className='w-[200px]' src={logo}></img>
                     <h1 className='capitalize text-3xl mt-3 font-medium text-[#3f3f3f]'>Please Register your account</h1>
                 </div>
             </div>
-            <div className='w-2/5 signin-form bg-red-'>
+            <div className='w-2/5 signin-form'>
                 <form className='space-y-5' onSubmit={hanldeRegister}>
                     <div>
                         <label className='block'>Your Name</label>
