@@ -5,15 +5,17 @@ import Swal from 'sweetalert2'
 import update from '../assets/update.png'
 import dele from '../assets/delete.png'
 import { Link } from "react-router-dom";
+import useAxiosSecure from "../hooks/useAxiosSecure";
 
 
 const MyPostedJobs = () => {
 
     const { user } = useContext(AuthContext)
     const [jobs, setJobs] = useState([])
+    const axiosSecure = useAxiosSecure();
 
     const getdata = async () => {
-        const { data } = await axios(`${import.meta.env.VITE_API_URL}/jobs/email/${user?.email}`);
+        const { data } = await axiosSecure.get(`${import.meta.env.VITE_API_URL}/jobs/email?email=${user?.email}`);
         setJobs(data);
     };
 

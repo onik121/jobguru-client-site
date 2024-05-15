@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
-import axios from "axios";
+import useAxiosSecure from "../hooks/useAxiosSecure";
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import MyDocument from "../components/MyDocument";
 
 
 const Mybids = () => {
@@ -8,17 +10,16 @@ const Mybids = () => {
 
     const { user } = useContext(AuthContext)
     const [bids, setBids] = useState([]);
+    const axiosSecure = useAxiosSecure();
 
-    const getdata = async () => {
-        const { data } = await axios(`${import.meta.env.VITE_API_URL}/my-bids/${user?.email}`);
-        setBids(data);
-    };
 
     useEffect(() => {
+        const getdata = async () => {
+            const { data } = await axiosSecure.get(`${import.meta.env.VITE_API_URL}/my-bids?email=${user?.email}`);
+            setBids(data);
+        };
         getdata();
     }, []);
-
-    console.log(bids)
 
     return (
         <div className="min-h-[calc(100vh-390px)] mb-10 flex items-center">
@@ -55,7 +56,7 @@ const Mybids = () => {
                                         {
                                             bids.map(bid => <tr key={bid._id}>
                                                 <td className='px-4 py-4 text-sm whitespace-nowrap bg-red-'><p>{bid.job_title}</p></td>
-                                                <td className='px-4 py-4 text-sm whitespace-nowrap bg-green-'>10/04/2024</td>
+                                                <td className='px-4 py-4 text-sm whitespace-nowrap bg-green-'>{new Date(bid.deadline).toLocaleDateString()}</td>
                                                 <td className='px-4 py-4 text-sm whitespace-nowrap'><p>${bid.max_salary} - ${bid.min_salary}</p></td>
                                                 <td className='px-4 py-4 text-sm whitespace-nowrap'><p>{bid.category}</p></td>
                                                 <td className='px-4 py-4 text-sm whitespace-nowrap'><p>{bid.job_category}</p></td>
@@ -66,6 +67,13 @@ const Mybids = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="flex justify-center mt-8">
+                    <PDFDownloadLink document={<MyDocument bids={bids} />} fileName="example.pdf">
+                        {({ blob, url, loading, error }) =>
+                            loading ? 'Loading Document...' : <button className="button">Download</button>
+                        }
+                    </PDFDownloadLink>
                 </div>
             </section>
         </div>
