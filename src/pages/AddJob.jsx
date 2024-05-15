@@ -5,6 +5,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import toast from 'react-hot-toast';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { Scroll } from '../components/Scroll';
+import { Helmet } from 'react-helmet';
 
 const AddJob = () => {
 
@@ -46,6 +48,10 @@ const AddJob = () => {
 
     return (
         <div className='min-h-[calc(100vh-325px)]'>
+            <Scroll></Scroll>
+            <Helmet>
+                <title>Add Your Opportunity</title>
+            </Helmet>
             <div className='rounded-md bg-[#f1fcf6] boder p-5 mb-14 mt-4'>
                 <h1 className='text-center text-3xl font-bold text-[#3f3f3f]'>Job Upload Center</h1>
                 <p className='text-center max-w-[600px] mx-auto text-lg text-black mt-5'>Streamline hiring, connect with talent. Post jobs effortlessly. Your gateway to building exceptional teams starts here.</p>
@@ -57,7 +63,7 @@ const AddJob = () => {
                                 <label className='block'>Job Title</label>
                                 <input type="text" name="title" className='w-full' required />
                             </div>
-                            <div className='flex gap-6'>
+                            <div className='flex gap-6 input-box'>
                                 <div className='w-1/2'>
                                     <select name='category' className='Select'>
                                         <option value='On-Site Job'>On-Site Job</option>
@@ -80,7 +86,7 @@ const AddJob = () => {
                                     </select>
                                 </div>
                             </div>
-                            <div className='flex gap-6'>
+                            <div className='flex gap-6 input-box'>
                                 <div className='w-1/2'>
                                     <label className='block'>Banner Url</label>
                                     <input className='w-full' type="text" name="banner" required />
@@ -90,7 +96,7 @@ const AddJob = () => {
                                     <DatePicker className='date' selected={startDate} onChange={(date) => setStartDate(date)} />
                                 </div>
                             </div>
-                            <div className='flex gap-6'>
+                            <div className='flex gap-6 input-box'>
                                 <div className='w-1/2'>
                                     <label className='block'>Your Name</label>
                                     <input className='w-full' type="text" name="" value={user?.displayName} disabled />
@@ -101,7 +107,7 @@ const AddJob = () => {
                                 </div>
                             </div>
                             <div>
-                                <div className='flex gap-6'>
+                                <div className='flex gap-6 input-box'>
                                     <div className='w-1/2'>
                                         <label className='block'>Minimun Salary</label>
                                         <input className='w-full' type="number" name="minimum" required />

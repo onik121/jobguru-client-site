@@ -3,6 +3,8 @@ import { AuthContext } from "../provider/AuthProvider";
 import useAxiosSecure from "../hooks/useAxiosSecure";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import MyDocument from "../components/MyDocument";
+import { Scroll } from "../components/Scroll";
+import { Helmet } from "react-helmet";
 
 
 const Mybids = () => {
@@ -23,6 +25,10 @@ const Mybids = () => {
 
     return (
         <div className="min-h-[calc(100vh-390px)] mb-10 flex items-center">
+            <Scroll></Scroll>
+            <Helmet>
+                <title>Applied Jobs</title>
+            </Helmet>
             <section className='container mx-auto pt-12'>
                 <div className='flex items-center gap-x-3'>
                     <h2 className='text-2xl font-medium text-[#3f3f3f]'>My Bids</h2>

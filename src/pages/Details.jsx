@@ -9,6 +9,8 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { Scroll } from "../components/Scroll";
+import { Helmet } from "react-helmet";
 
 
 const Details = () => {
@@ -57,9 +59,15 @@ const Details = () => {
 
 
     return (
-        <div className="min-h-[calc(100vh-300px)] flex items-center">
+        <div className="min-h-[calc(100vh-300px)] flex items-center mb-14 mt-4">
+            <Scroll></Scroll>
+            <Helmet>
+                <title>Job Details</title>
+            </Helmet>
             <div className="details-container bg-[#f1fcf6] p-4 rounded-md boder">
-                <img className="rounded-md" src={job_banner}></img>
+                <div className="flex items-center">
+                    <img className="rounded-md" src={job_banner}></img>
+                </div>
                 <div className="flex items-center">
                     <div className="w-full">
                         <div>

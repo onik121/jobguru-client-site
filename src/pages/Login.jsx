@@ -6,6 +6,8 @@ import toast from 'react-hot-toast';
 import google from '../assets/goole.png'
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import auth from '../firebase/firebase.config';
+import { Scroll } from '../components/Scroll';
+import {Helmet} from "react-helmet";
 
 const Login = () => {
 
@@ -53,6 +55,10 @@ const Login = () => {
 
     return (
         <div className='mb-14 mt-4 min-h-[calc(100vh-390px)] flex items-center justify-between sign-in gap-10'>
+            <Scroll></Scroll>
+            <Helmet>
+                <title>Login your account</title>
+            </Helmet>
             <div className='w-1/2 signin-text'>
                 <div>
                     <img className='w-[200px]' src={logo}></img>

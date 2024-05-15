@@ -1,9 +1,15 @@
+import { Helmet } from 'react-helmet';
 import img1 from '../assets/blog1.jpg'
 import img2 from '../assets/blog2.jpg'
+import { Scroll } from '../components/Scroll';
 
 const Blog = () => {
     return (
         <div className="min-h-[calc(100vh-325px)] mb-14 mt-4 flex gap-8 blog-container">
+            <Scroll></Scroll>
+            <Helmet>
+                <title>Read BLog</title>
+            </Helmet>
             <div className='w-[30%] blog-newsletter p-4 h-fit rounded-md'>
                 <h1 className='text-3xl font-semibold text-[#3f3f3f]'>Get the latest blogs!</h1>
                 <h2 className='text-xl font-medium text-[#3f3f3f] mb-4 mt-1'>Enter your email address below</h2>

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import BestJobPlatform from "../components/BestJobPlatform";
 import CategoryTab from "../components/CategoryTab";
 import Slider from "../components/Slider";
@@ -9,6 +10,9 @@ const Home = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>JobGuru</title>
+            </Helmet>
             <div className="mt-3"><Slider></Slider></div>
             <WhoUsedJobguru></WhoUsedJobguru>
             <div>

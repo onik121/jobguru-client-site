@@ -4,6 +4,8 @@ import { useContext, useState } from 'react';
 import { AuthContext } from './../provider/AuthProvider';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import toast from 'react-hot-toast';
+import { Scroll } from '../components/Scroll';
+import { Helmet } from 'react-helmet';
 
 const Register = () => {
 
@@ -35,6 +37,10 @@ const Register = () => {
 
     return (
         <div className='mb-14 mt-4 min-h-[calc(100vh-385px)] flex items-center justify-between sign-in gap-10'>
+            <Scroll></Scroll>
+            <Helmet>
+                <title>Please Register</title>
+            </Helmet>
             <div className='bg-red- w-1/2 signin-text'>
                 <div>
                     <img className='w-[200px]' src={logo}></img>

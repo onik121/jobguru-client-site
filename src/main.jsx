@@ -22,6 +22,7 @@ import Error from './pages/Error';
 import Mybids from './pages/Mybids';
 import AddJob from './pages/AddJob';
 import Blog from './pages/Blog';
+import { Scroll } from './components/Scroll';
 
 const router = createBrowserRouter([
   {
@@ -79,7 +80,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} /><Toaster position="top-right"/>
+      <RouterProvider router={router}>
+        <Toaster position="top-right" />
+      </RouterProvider>
     </AuthProvider>
   </React.StrictMode>
 );

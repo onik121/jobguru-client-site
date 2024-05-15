@@ -1,5 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import img from '../assets/file.png'
+import { Scroll } from "../components/Scroll";
+import { Helmet } from "react-helmet";
 
 
 const AllJobs = () => {
@@ -8,6 +10,10 @@ const AllJobs = () => {
 
     return (
         <div className="min-h-[calc(100vh-390px)] mb-10 flex items-center">
+            <Scroll></Scroll>
+            <Helmet>
+                <title>Find Best One</title>
+            </Helmet>
             <section className='container mx-auto pt-12'>
                 <div className='flex items-center gap-x-3'>
                     <h2 className='text-2xl font-medium text-[#3f3f3f]'>Total Jobs</h2>
