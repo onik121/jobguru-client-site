@@ -6,8 +6,8 @@ const BestJobPlatform = () => {
         <div className='best-platfrom-container mt-16 mb-16'>
             <div className='flex items-center'>
                 <div className='space-y-8'>
-                    <h1 className='text-4xl font-bold text-[#3f3f3f] max-w-[600px] -mb-1'>Best Job Search platform Experience for you</h1>
-                    <p className=''>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <h1 className='text-4xl font-bold text-[#3f3f3f] max-w-[600px] -mb-2'>Best Job Search platform Experience for you</h1>
+                    <p>Embark on a journey of unparalleled job search satisfaction with our platform, offering tailored solutions to match your career goals, preferences, and aspirations seamlessly. Discover your perfect job today!</p>
                     <div className='flex gap-14'>
                         <div className='space-y-5'>
                             <div className='flex items-center check-box gap-3'><img src={check}></img><p className='font-medium'>Corporate Business jobs</p></div>
