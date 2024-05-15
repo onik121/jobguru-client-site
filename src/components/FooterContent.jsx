@@ -20,14 +20,14 @@ const FooterContent = () => {
                 <div className="space-y-2">
                     <h2 className="text-2xl font-semibold text-[#3f3f3f] mb-3">Legal</h2>
                     <Link className="block">Terms of use</Link>
-                    <Link className="block">Terms of use</Link>
-                    <Link className="block">Terms of use</Link>
+                    <Link className="block">Privacy policy</Link>
+                    <Link className="block">Cookie policy</Link>
                 </div>
                 <div className="space-y-2">
-                    <h2 className="text-2xl font-semibold text-[#3f3f3f] mb-3">About</h2>
-                    <Link className="block">Terms of use</Link>
-                    <Link className="block">Terms of use</Link>
-                    <Link className="block">Terms of use</Link>
+                    <h2 className="text-2xl font-semibold text-[#3f3f3f] mb-3">Contact Us</h2>
+                    <Link className="block">Feni Sadar, Feni, Bangladesh</Link>
+                    <Link className="block">+88 01608272038</Link>
+                    <Link className="block">hasanjahid557788@gmail.com</Link>
                 </div>
             </div>
             <Footer.Divider />
