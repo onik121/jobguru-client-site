@@ -33,7 +33,7 @@ const JobCart = ({ job }) => {
                 </div>
                 <div className="flex items-center gap-2 mb-4">
                     <img src={img3}></img>
-                    <p className="font-medium">Salary: ${max_salary} - {min_salary}</p>
+                    <p className="font-medium">Salary: ${max_salary} - ${min_salary}</p>
                 </div>
                 <div className="flex items-center gap-2">
                     <img src={img1}></img>

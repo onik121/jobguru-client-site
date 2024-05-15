@@ -17,7 +17,7 @@ const Home = () => {
             <WhoUsedJobguru></WhoUsedJobguru>
             <div>
                 <div className="text-center max-w-[700px] mx-auto mb-10">
-                    <h1 className="text-4xl font-bold text-[#3f3f3f] mb-4">Featured Jobs</h1>
+                    <h1 className="text-4xl font-bold text-[#3f3f3f] mb-4 title-2">Featured Jobs</h1>
                     <p>Discover top-tier employment opportunities handpicked for you, tailored to match your career goals seamlessly. Your dream job awaits!</p>
                 </div>
                 <CategoryTab></CategoryTab>

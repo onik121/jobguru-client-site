@@ -461,7 +461,9 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-default-outline:fo
     box-shadow: none !important;
 }
 
-
+.title {
+    line-height: 60px;
+}
 
 
 /* responsive code */
@@ -562,5 +564,18 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-default-outline:fo
 
     .logo-box {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .title {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .title-2{
+        font-size: 32px;
+    }
+
+    .sub-title{
+        font-size: 17px;
     }
 }

@@ -44,7 +44,7 @@ const UpdateJobData = () => {
                 <title>Update Your Opportunity</title>
             </Helmet>
             <div className="p-5 rounded-md bg-[#f1fcf6] boder w-full">
-                <h1 className='text-center text-3xl font-bold text-[#3f3f3f]'>Update Your Opportunities</h1>
+                <h1 className='text-center text-4xl font-bold text-[#3f3f3f] title-2'>Update Your Opportunities</h1>
                 <p className='text-center max-w-[600px] mx-auto text-lg text-black mt-5'>Refine and refresh your job listings effortlessly. Stay ahead in hiring with our intuitive update platform.</p>
                 <div className='add-job-cantainer mt-8'>
                     <div className='add-background'></div>

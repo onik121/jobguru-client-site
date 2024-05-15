@@ -31,8 +31,8 @@ const Mybids = () => {
             </Helmet>
             <section className='container mx-auto pt-12'>
                 <div className='flex items-center gap-x-3'>
-                    <h2 className='text-2xl font-medium text-[#3f3f3f]'>My Bids</h2>
-                    <span className='px-3 py-1 text-xs text-white bg-[#7ad2a2] rounded-md'>{bids.length} Bids</span>
+                    <h2 className='text-3xl font-medium text-[#3f3f3f]'>My Bids</h2>
+                    <span className='px-3 py-1 text-xs text-white bg-[#7ad2a2] rounded-md mt-1'>{bids.length} Bids</span>
                 </div>
                 <div className='flex flex-col mt-6'>
                     <div className='-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8'>
