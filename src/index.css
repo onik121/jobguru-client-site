@@ -268,7 +268,21 @@
     align-items: center;
 }
 
+.search input {
+    outline: none;
+    height: 47px;
+    border: 1px solid black;
+    padding: 0px 10px;
+    border-radius: 5px;
+}
 
+.drop-down {
+    border: 1px solid whitesmoke;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    min-width: 120px;
+}
 
 
 
@@ -571,11 +585,11 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-default-outline:fo
         line-height: 45px;
     }
 
-    .title-2{
+    .title-2 {
         font-size: 32px;
     }
 
-    .sub-title{
+    .sub-title {
         font-size: 17px;
     }
 }

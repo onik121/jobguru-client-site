@@ -21,10 +21,10 @@ const AuthProvider = ({ children }) => {
 
     const updateUserProfile = (name, photo) => {
         return updateProfile(auth.currentUser, {
-          displayName: name,
-          photoURL: photo,
+            displayName: name,
+            photoURL: photo,
         })
-      }
+    }
 
     const logOut = () => {
         return signOut(auth);
@@ -37,17 +37,16 @@ const AuthProvider = ({ children }) => {
             setLoading(false);
             const userEmail = currentuser?.email || user?.email;
             const loggedUser = { email: userEmail }
-
             // if user exisits then issue a token
             if (currentuser) {
                 axios.post(`${import.meta.env.VITE_API_URL}/jwt`, loggedUser, { withCredentials: true })
-                    .then( (res) => {
+                    .then((res) => {
                         // console.log('token response', res.data)
                     })
             }
             else {
                 axios.post(`${import.meta.env.VITE_API_URL}/logout`, loggedUser, { withCredentials: true })
-                    .then( () => {
+                    .then(() => {
                         // console.log(res.data)
                     })
             }

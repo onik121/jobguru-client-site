@@ -50,7 +50,6 @@ const router = createBrowserRouter([
       {
         path: '/all-jobs',
         element: <AllJobs></AllJobs>,
-        loader: () => fetch(`${import.meta.env.VITE_API_URL}/jobs`)
       },
       {
         path: '/add-job',
@@ -80,9 +79,10 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
-      <RouterProvider router={router}>
-        <Toaster position="top-right" />
-      </RouterProvider>
+      <RouterProvider router={router} />
+      <Toaster
+        position="top-center"
+      />
     </AuthProvider>
   </React.StrictMode>
 );
