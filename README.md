@@ -15,7 +15,7 @@
 * Any one can aply for jobs
 
 
-## Technologies i used on this prokject: 
+## Technologies i used on this project: 
 <div>
   <img src="https://skillicons.dev/icons?i=html" height="45" alt="html5 logo"  />
   <img width="15" />
